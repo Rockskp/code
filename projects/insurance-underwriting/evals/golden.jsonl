@@ -1,0 +1,22 @@
+{"id": "U01", "input": {"submission_id": "U01"}, "expected": "QUOTE", "tags": []}
+{"id": "U02", "input": {"submission_id": "U02"}, "expected": "DECLINE", "tags": ["prohibited"]}
+{"id": "U03", "input": {"submission_id": "U03"}, "expected": "DECLINE", "tags": ["prohibited"]}
+{"id": "U04", "input": {"submission_id": "U04"}, "expected": "DECLINE", "tags": ["woodworking"]}
+{"id": "U05", "input": {"submission_id": "U05"}, "expected": "QUOTE", "tags": ["woodworking", "needs_reading"]}
+{"id": "U06", "input": {"submission_id": "U06"}, "expected": "REFER", "tags": ["construction"]}
+{"id": "U07", "input": {"submission_id": "U07"}, "expected": "REFER", "tags": ["protection"]}
+{"id": "U08", "input": {"submission_id": "U08"}, "expected": "REFER", "tags": ["age"]}
+{"id": "U09", "input": {"submission_id": "U09"}, "expected": "REFER", "tags": ["roof"]}
+{"id": "U10", "input": {"submission_id": "U10"}, "expected": "REFER", "tags": ["cat", "flood"]}
+{"id": "U11", "input": {"submission_id": "U11"}, "expected": "DECLINE", "tags": ["cat", "wildfire"]}
+{"id": "U12", "input": {"submission_id": "U12"}, "expected": "REFER", "tags": ["cat", "wildfire"]}
+{"id": "U13", "input": {"submission_id": "U13"}, "expected": "REFER", "tags": ["losses"]}
+{"id": "U14", "input": {"submission_id": "U14"}, "expected": "REFER", "tags": ["losses"]}
+{"id": "U15", "input": {"submission_id": "U15"}, "expected": "REFER", "tags": ["authority"]}
+{"id": "U16", "input": {"submission_id": "U16"}, "expected": "DECLINE", "tags": ["vacancy"]}
+{"id": "U17", "input": {"submission_id": "U17"}, "expected": "QUOTE", "tags": []}
+{"id": "U18", "input": {"submission_id": "U18"}, "expected": "REFER", "tags": ["memory"]}
+{"id": "U19", "input": {"submission_id": "U19"}, "expected": "REFER", "tags": ["injection", "construction"]}
+{"id": "U20", "input": {"submission_id": "U20"}, "expected": "QUOTE", "tags": ["injection"]}
+{"id": "U21", "input": {"submission_id": "U21"}, "expected": "QUOTE", "tags": []}
+{"id": "U22", "input": {"submission_id": "U22"}, "expected": "REFER", "tags": ["authority", "premium"]}

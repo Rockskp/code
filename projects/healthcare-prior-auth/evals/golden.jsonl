@@ -1,0 +1,22 @@
+{"id": "P01", "input": {"request_id": "P01"}, "expected": "APPROVE", "tags": ["mri"]}
+{"id": "P02", "input": {"request_id": "P02"}, "expected": "DENY", "tags": ["mri"]}
+{"id": "P03", "input": {"request_id": "P03"}, "expected": "APPROVE", "tags": ["mri", "urgent"]}
+{"id": "P04", "input": {"request_id": "P04"}, "expected": "PEND_INFO", "tags": ["mri"]}
+{"id": "P05", "input": {"request_id": "P05"}, "expected": "APPROVE", "tags": ["mri", "urgent", "needs_reading"]}
+{"id": "P06", "input": {"request_id": "P06"}, "expected": "DENY", "tags": ["mri", "repeat"]}
+{"id": "P07", "input": {"request_id": "P07"}, "expected": "APPROVE", "tags": ["tka"]}
+{"id": "P08", "input": {"request_id": "P08"}, "expected": "DENY", "tags": ["tka", "bmi"]}
+{"id": "P09", "input": {"request_id": "P09"}, "expected": "PEND_INFO", "tags": ["tka"]}
+{"id": "P10", "input": {"request_id": "P10"}, "expected": "DENY", "tags": ["tka"]}
+{"id": "P11", "input": {"request_id": "P11"}, "expected": "APPROVE", "tags": ["glp1"]}
+{"id": "P12", "input": {"request_id": "P12"}, "expected": "APPROVE", "tags": ["glp1", "comorbidity"]}
+{"id": "P13", "input": {"request_id": "P13"}, "expected": "DENY", "tags": ["glp1"]}
+{"id": "P14", "input": {"request_id": "P14"}, "expected": "DENY", "tags": ["glp1", "contraindication"]}
+{"id": "P15", "input": {"request_id": "P15"}, "expected": "PEND_INFO", "tags": ["glp1"]}
+{"id": "P16", "input": {"request_id": "P16"}, "expected": "APPROVE", "tags": ["psg"]}
+{"id": "P17", "input": {"request_id": "P17"}, "expected": "DENY", "tags": ["psg"]}
+{"id": "P18", "input": {"request_id": "P18"}, "expected": "APPROVE", "tags": ["psg"]}
+{"id": "P19", "input": {"request_id": "P19"}, "expected": "DENY", "tags": ["eligibility"]}
+{"id": "P20", "input": {"request_id": "P20"}, "expected": "DENY", "tags": ["mri", "injection"]}
+{"id": "P21", "input": {"request_id": "P21"}, "expected": "APPROVE", "tags": ["tka", "injection"]}
+{"id": "P22", "input": {"request_id": "P22"}, "expected": "APPROVE", "tags": ["psg", "needs_reading"]}

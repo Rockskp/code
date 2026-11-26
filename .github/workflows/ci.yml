@@ -1,0 +1,20 @@
+name: ci
+on: [push, pull_request]
+permissions: { contents: read }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy: { matrix: { project: [finance-aml-triage, healthcare-prior-auth, insurance-underwriting] } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv venv && uv pip install -e platform/agentkit[dev] -e projects/${{ matrix.project }}[dev] ruff pip-audit
+      - run: uv run pytest -q platform/agentkit
+      - run: cd projects/${{ matrix.project }} && uv run pytest -q && uv run python evals/run_evals.py
+      - run: uv run pip-audit || true
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2
