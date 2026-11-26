@@ -1,0 +1,25 @@
+name: ci
+on: [push, pull_request]
+permissions: { contents: read }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy: { matrix: { project: [finance-aml-triage, healthcare-prior-auth, insurance-underwriting] } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: { python-version: "3.12" }
+      - run: uv venv && uv pip install -e platform/agentkit[dev] -e projects/${{ matrix.project }}[dev] ruff pip-audit
+      # Use the root venv explicitly: `uv run` inside a project dir would create a fresh project venv.
+      - run: .venv/bin/python -m pytest -q platform/agentkit
+      - run: cd projects/${{ matrix.project }} && ../../.venv/bin/python -m pytest -q && ../../.venv/bin/python evals/run_evals.py
+      - run: .venv/bin/pip-audit || true
+  secrets:
+    runs-on: ubuntu-latest
+    permissions: { contents: read, pull-requests: read }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
